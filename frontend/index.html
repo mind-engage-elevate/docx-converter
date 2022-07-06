@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docxconverter</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <!-- <link rel="stylesheet" href="loading.css" type="text/css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="before_upload">
+
+    <form method="POST" enctype="multipart/form-data" id="fileUploadForm" name="form">
+      <div id="whole">
+        <div id="left">
+          <!-- <div class="d"></div> -->
+          <h1 style="margin-top: 3%;">WORD --> TXT / PDF / XML </h1>
+
+          <div class="drag-drop">
+            <img class="drag-drop-img" src="image/cloud-computing.png" alt="">
+            <div><i class="fa-solid fa-file-lines"></i></div>
+            <p class="drag-drop-tag">Click here or Drag & Drop a docx file </p>
+            <!-- <div class="drag-drop-thumb" data-label="myfile.txt"></div> -->
+            <input type="file" name="upload_file" class="drag-drop-input" accept="application/msword,
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document" required >
+          </div>
+        </div>
+
+
+        <div id="right">
+          <h1>Select Required Format</h1>
+
+          <div id="outer">
+
+            <div id="one">
+                <label for="XML">
+                <input type="radio" id="XML" name="required_format" value="xml">
+                <img src="image/xml-new.png" alt="XML" style="height:112px; width:93px; margin-top:-6px; ">
+              </label>
+            </div>
+
+            <div id="two"> 
+                <label for="PDF">
+                <input type="radio" id="PDF" name="required_format" value="pdf">
+                <img src="image/002-pdf-file2.png" alt="PDF" style="height:105px; width:99px; margin-left: 12px; "> <br>
+              </label><br>
+            </div>
+              
+            <div id="three">
+
+                <label for="TXT">
+                  <input type="radio" id="TXT" name="required_format" value="txt">
+                <img src="image/txt-file.png" alt="TXT"
+                  style="height:107px; width:100px; margin-top:-3px; margin-left: 8px; "> <br>
+              </label><br>
+            </div>
+
+          </div>
+
+          <div class="continue-button">
+            <!-- <input type="submit" id="sub_btn" value="Convert" disabled="disabled"> -->
+            <button type="button" id="sub_btn"> <span>Convert</span>
+            </button>
+
+          </div>
+
+
+        </div>
+    </form>
+  </div>
+  </div>
+
+  <div id="modal">
+    <div class="modal_content">
+        <span class="close"> &times;</span>
+        <p id="msg"></p>
+    </div>
+  </div>
+
+  <div id="loading_page">
+    <div class="circle">
+      <div class="outer">
+        <div class="over"><img src="image/word_circle1.png" alt=""></div>
+        <div class="base1 base"></div>
+        <div class="base2 base"></div>
+        <div class="base3 base"></div>
+        <div class="base4 base"></div>
+        <div class="base4 base"></div>
+      </div>
+    </div>
+    <div>
+      <h2 id="loading-content">Uploading Your document</h2>
+    </div>
+
+  </div>
+
+
+
+  <script>
+    const loader = document.getElementById("loading-content");
+    setTimeout(() => {
+      loader.innerHTML = "Uploading... 0%";
+    }, 9000+1000);
+
+    setTimeout(() => {
+      loader.innerHTML = "Uploading... 20%";
+    }, 9000+1800);
+
+    setTimeout(() => {
+      loader.innerHTML = "Uploading... 50%";
+    }, 9000+3000);
+
+    setTimeout(() => {
+      loader.innerHTML = "Uploading... 90%";
+    }, 9000+4000);
+
+    setTimeout(() => {
+      loader.innerHTML = "Uploaded Successfullly!";
+    }, 9000+5000);
+
+    setTimeout(() => {
+      loader.innerHTML = "Converting Your File...";
+    }, 9000+5500);
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="drag_drop.js"></script>
+  <script src="../integrade/controller.js"></script>
+</body>
+
+</html>

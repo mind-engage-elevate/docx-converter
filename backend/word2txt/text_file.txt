@@ -1,5 +1,0 @@
-MIND - Engage and Elevate
-
-
-
-This is the first session on Python Backend Series.

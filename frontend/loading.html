@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="loading.css" type="text/css">
+  <title>Docxconverter</title>
+</head>
+
+<body>
+  <div class="circle">
+    <div class="outer">
+      <div class="over"><img src="image/word_circle1.png" alt=""></div>
+      <div class="base"></div>
+      <div class="base2"></div>
+      <div class="base3"></div>
+      <div class="base4"></div>
+      <div class="base4"></div>
+    </div>
+  </div>
+  <div>
+    <h2 id="loading-content">Uploading Your document</h2>
+  </div>
+
+  <a href="last.html">Next Page</a>
+
+  <script>
+    const loader = document.getElementById("loading-content");
+    setTimeout(() => {
+      loader.innerHTML = "Uploading... 0%";
+    }, 1000);
+
+    setTimeout(() => {
+      loader.innerHTML = "Uploading... 20%";
+    }, 1800);
+
+    setTimeout(() => {
+      loader.innerHTML = "Uploading... 50%";
+    }, 3000);
+
+    setTimeout(() => {
+      loader.innerHTML = "Uploading... 90%";
+    }, 4000);
+
+    setTimeout(() => {
+      loader.innerHTML = "Uploaded Successfullly!";
+    }, 5000);
+
+    setTimeout(() => {
+      loader.innerHTML = "Converting Your File...";
+    }, 5500);
+  </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+   <script src="../integrade/controller.js"></script>
+</body>
+
+</html>
