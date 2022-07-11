@@ -7,3 +7,5 @@ docx2pdf
 fastApi
 
 virtualenv
+
+uvicorn==0.16.0
