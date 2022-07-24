@@ -5,7 +5,7 @@ from fastapi import FastAPI, File, UploadFile, Form
 from fastapi.staticfiles import StaticFiles
 import logging , datetime, time 
 from fastapi.middleware.cors import CORSMiddleware 
-
+     
 app = FastAPI()
 
 app.mount("/output_files", StaticFiles(directory="output_files"), name="media") 
